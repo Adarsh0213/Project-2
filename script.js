@@ -43,7 +43,7 @@ function uploadPost() {
 function logout() {
   localStorage.removeItem('username');
   alert('Logged out successfully.');
-  window.location.href = '../Insta App/login page/login.html';
+  window.location.href = '../login page/login.html';
 }
 
 

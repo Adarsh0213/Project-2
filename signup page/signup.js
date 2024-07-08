@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Optionally, redirect to another page after signup
     alert('Sign up successful! Redirecting to login page.');
-    window.location.href = '../login page/login.html';
+    window.location.href = '../index.html';
   });
 });
 

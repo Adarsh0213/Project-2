@@ -3,66 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Instagram Clone - Home</title>
+  <title>Login</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <div class="header-left">
-      <button class="toggle-button" onclick="toggleSidebar()">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-      </button>
-      <h1>Instagram Clone</h1>
-    </div>
-    <div class="header-right">
-      <div id="usernameDisplay"></div>
-      <button onclick="logout()">Logout</button>
-    </div>
-  </header>
-  
-  <main>
-    <aside class="sidebar" id="sidebar">
-      <!-- Sidebar content -->
-      <ul>
-        <li><a href="#">Profile</a></li>
-        <li><a href="#">Explore</a></li>
-        <li><a href="#">Notifications</a></li>
-        <li><a href="#">Settings</a></li>
-      </ul>
-    </aside>
-    
-    <section class="feeds">
-      <!-- Feeds content -->
-      <section class="post-form">
-        <input type="text" id="caption" placeholder="Add a caption">
-        <input type="file" id="imageUpload">
-        <button onclick="uploadPost()">Post</button>
-      </section>
+  <div class="container">
+    <h2>Login</h2>
+    <form id="loginForm">
+      <label for="userID">User ID:</label>
+      <input type="text" id="userID" name="userID" required>
       
-      <section class="posts" id="posts">
-        <!-- Posts will be dynamically added here -->
-      </section>
-    </section>
-    
-    <aside class="chat">
-      <!-- Chatting options content -->
-      <h2>Chatting Options</h2>
-      <ul>
-        <li><a href="#" onclick="openChat('Friend 1')">Friend 1</a></li>
-        <li><a href="#" onclick="openChat('Friend 2')">Friend 2</a></li>
-        <li><a href="#" onclick="openChat('Friend 3')">Friend 3</a></li>
-        <li>...</li>
-      </ul>
-      <div class="chat-window" id="chatWindow">
-        <!-- Chat messages will be dynamically added here -->
-      </div>
-      <input type="text" id="chatInput" placeholder="Type a message">
-      <button onclick="sendMessage()">Send</button>
-    </aside>
-  </main>
-  
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required>
+      
+      <button type="submit">Login</button>
+    </form>
+
+    <p>Do not have an account? <a href="../signup page/signup.html">Sign Up </a></p>
+
+  </div>
+
   <script src="script.js"></script>
 </body>
 </html>

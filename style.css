@@ -1,145 +1,53 @@
-/* General Styles */
 body {
   font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #fafafa;
-}
-
-header {
-  background-color: #fff;
-  border-bottom: 1px solid #dbdbdb;
-  padding: 10px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.header-left {
-  display: flex;
-  align-items: center;
-}
-
-.header-left .toggle-button {
-  cursor: pointer;
-  background: none;
-  border: none;
-  padding: 5px;
-  margin-right: 10px;
-}
-
-.bar {
-  display: block;
-  width: 20px;
-  height: 2px;
-  background-color: #333;
-  margin: 4px 0;
-}
-
-.header-right {
-  display: flex;
-  align-items: center;
-}
-
-.header-right button {
-  margin-left: 10px;
-  padding: 8px;
-  background-color: #3897f0;
-  border: none;
-  border-radius: 5px;
-  color: #fff;
-  cursor: pointer;
-}
-
-.header-right button:hover {
-  background-color: #3181cc;
-}
-
-main {
-  display: flex;
-}
-
-.sidebar {
-  width: 250px;
   background-color: #f0f0f0;
-  border-right: 1px solid #dbdbdb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  background-color: white;
   padding: 20px;
-  display: none; /* Hidden by default */
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  text-align: center;
 }
 
-.sidebar ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-.sidebar li {
-  margin-bottom: 10px;
-}
-
-.sidebar a {
-  text-decoration: none;
-  color: #333;
-  font-weight: bold;
-}
-
-.sidebar a:hover {
-  text-decoration: underline;
-}
-
-.feeds {
-  flex: 1;
-  padding: 20px;
-}
-
-.post-form {
-  background-color: #fff;
-  padding: 20px;
-  border: 1px solid #dbdbdb;
-  border-radius: 5px;
+h2 {
   margin-bottom: 20px;
 }
 
-.post-form input,
-.post-form button {
-  width: calc(100% - 20px);
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 5px;
+  text-align: left;
+}
+
+input {
+  margin-bottom: 10px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
   padding: 10px;
-  margin-bottom: 10px;
-  border: 1px solid #dbdbdb;
-  border-radius: 5px;
+  border: none;
+  border-radius: 4px;
+  background-color: #28a745;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
 }
 
-.posts {
-  /* Styles for posts will be dynamically added */
-}
-
-.chat {
-  width: 250px;
-  background-color: #f0f0f0;
-  padding: 20px;
-  border-left: 1px solid #dbdbdb;
-}
-
-.chat h2 {
-  margin-bottom: 10px;
-}
-
-.chat ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-.chat li {
-  margin-bottom: 10px;
-}
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-  .sidebar,
-  .chat {
-    display: none;
-  }
-
-  main {
-    flex-direction: column;
-  }
+button:hover {
+  background-color: #218838;
 }

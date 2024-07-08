@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (storedUserData && userID === storedUserData.userID && password === storedUserData.password) {
       alert('Login successful!');
-      window.location.href = '../Dashboard page/Dashboard.html';
+      window.location.href = './Dashboard page/Dashboard.html';
     } else {
       alert('Invalid user ID or password. Please try again.');
     }

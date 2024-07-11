@@ -3,36 +3,73 @@ function toggleSidebar() {
   sidebar.style.display = (sidebar.style.display === 'block' || sidebar.style.display === '') ? 'none' : 'block';
 }
 
+
+function logout() {
+  localStorage.removeItem('username');
+  alert('Logged out successfully.');
+  window.location.href = '../index.html';
+}
+
+
+
+
+
+
+
+
+
+// Function to upload a new post with text and optional image
 function uploadPost() {
-  const caption = document.getElementById('caption').value;
-  const imageUpload = document.getElementById('imageUpload').files[0];
+  const caption = document.getElementById("caption").value;
+  const image = document.getElementById("imageUpload").files[0];
 
-  if (caption && imageUpload) {
-    const reader = new FileReader();
-    reader.onload = function (e) {
-      const posts = document.getElementById('posts');
+  // Validate if caption is not empty
+  if (caption.trim() !== '') {
+    // Create post container
+    const postContainer = document.createElement("div");
+    postContainer.classList.add("post");
 
-      const post = document.createElement('div');
-      post.className = 'post';
+    // Create caption element
+    const captionElement = document.createElement("p");
+    captionElement.textContent = caption;
+    postContainer.appendChild(captionElement);
 
-      const img = document.createElement('img');
-      img.src = e.target.result;
-      post.appendChild(img);
+    // Check if image file is selected
+    if (image) {
+      // Create image element
+      const imageElement = document.createElement("img");
+      imageElement.classList.add("post-image");
+      const reader = new FileReader();
+      reader.onload = function(e) {
+        imageElement.src = e.target.result;
+      };
+      reader.readAsDataURL(image);
+      postContainer.appendChild(imageElement);
+    }
 
-      const captionElement = document.createElement('p');
-      captionElement.textContent = caption;
-      post.appendChild(captionElement);
+    // Add  date and time element
+    const date = new Date();
+    const dateTimeElement = document.createElement("div");
+    dateTimeElement.classList.add("post-datetime");
+    dateTimeElement.textContent = `Posted on: ${date.toLocaleDateString()} ${date.toLocaleTimeString()}`;
+    postContainer.appendChild(dateTimeElement);
 
-      posts.insertBefore(post, posts.firstChild); // Add new post at the beginning
 
-      // Clear input fields
-      document.getElementById('caption').value = '';
-      document.getElementById('imageUpload').value = '';
-    };
+    // Append new post to the beginning of posts section
+    const postsSection = document.getElementById("posts");
+    if (postsSection.firstChild) {
+      postsSection.insertBefore(postContainer, postsSection.firstChild);
+    } else {
+      postsSection.appendChild(postContainer); // If no posts exist, add as first child
+    }
 
-    reader.readAsDataURL(imageUpload);
+    
+
+    // Clear input fields after posting
+    document.getElementById("caption").value = "";
+    document.getElementById("imageUpload").value = "";
   } else {
-    alert('Please enter a caption and select an image.');
+    alert("Please enter a caption before posting.");
   }
 }
 
@@ -40,11 +77,7 @@ function uploadPost() {
 
 
 
-function logout() {
-  localStorage.removeItem('username');
-  alert('Logged out successfully.');
-  window.location.href = '../index.html';
-}
+
 
 
 

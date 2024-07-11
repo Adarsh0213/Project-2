@@ -1,21 +1,22 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const signupForm = document.getElementById('signupForm');
 
-  signupForm.addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevent form submission
+document.addEventListener('DOMContentLoaded', function() {
+  const form = document.querySelector('form');
+  form.addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent default form submission
+      
+      // Fetch input field values
+      const userID = document.querySelector('input[type="text"][placeholder="UserID"]').value.trim();
+      const name = document.querySelector('input[type="text"][placeholder="Name"]').value.trim();
+      const email = document.querySelector('input[type="text"][placeholder="Email"]').value.trim();
+      const password = document.querySelector('input[type="password"][placeholder="Password"]').value.trim();
 
-    // Get form values
-    const userID = document.getElementById('userID').value;
-    const password = document.getElementById('password').value;
-    const fullName = document.getElementById('fullName').value;
-    const email = document.getElementById('email').value;
-
-    // Store in localStorage (for demonstration purposes)
-    const userData = {
+      // Store in localStorage (for demonstration purposes)
+     const userData = {
       userID,
+      name,
+      email,
       password,
-      fullName,
-      email
+
     };
 
     localStorage.setItem('userData', JSON.stringify(userData));
@@ -25,5 +26,6 @@ document.addEventListener('DOMContentLoaded', () => {
     window.location.href = '../index.html';
   });
 });
+
 
 

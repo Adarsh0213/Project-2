@@ -1,0 +1,239 @@
+/* Add these styles to your profile.css */
+
+/* profile.css */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: s#fafafa;
+}
+
+header {
+  background-color: #98e8bb;
+  border-bottom: 1px solid #dbdbdb;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  color: green;
+  font-size: larger;
+  margin-left: 30px;
+}
+
+/* Add these styles to your profile.css */
+.header-left a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.header-left a:hover {
+  text-decoration: underline; /* Optional: adds underline on hover */
+}
+
+
+.header-right {
+  display: flex;
+  align-items: center;
+}
+
+.header-right button {
+  margin-left: 10px;
+  padding: 8px;
+  background-color: #e42e49;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.header-right button:hover {
+  background-color: #3181cc;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+ 
+  
+  .profile-info {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 40px;
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+  
+  .profile-avatar {
+    margin-right: 20px;
+  }
+  
+  .profile-avatar img {
+    width: 400px;
+    height: 400px;
+    border-radius: 80%;
+  }
+  
+  .profile-details {
+    flex: 1;
+  }
+  
+  .profile-details h2 {
+    margin-top: 0;
+  }
+  
+  #editProfileForm {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+    position: relative;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+  }
+  
+  .edit-icon {
+    position: absolute;
+    right: 10px;
+    top: 35px;
+    cursor: pointer;
+  }
+  
+  form button {
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px; /* Ensure there's spacing above the button */
+    display: block; /* Ensure the button is displayed as a block element */
+    visibility: visible; /* Ensure the button is visible */
+    text-align: center; /* Center text alignment */
+  }
+  
+  form button:hover {
+    background-color: #555;
+  }
+  
+  footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #333;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+  
+
+
+
+/* Add these styles to your profile.css */
+
+.add-post, .posts {
+  margin-top: 50px;
+  margin-right: 100px;
+  margin-left: 100px;
+  margin-bottom: 20px;
+
+.add-post h2, .posts h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  margin-right: 100px;
+  margin-left: 100px;
+  margin-top: 50px ;
+}
+
+.add-post .form-group, .posts .post {
+  margin-bottom: 15px;
+  margin-right: 100px;
+  margin-left: 100px;
+}
+
+.add-post input[type="file"], .add-post textarea, .posts .post img {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.add-post button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #0ff344;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.add-post button:hover {
+  background-color: #9a55ac;
+
+}
+
+
+
+
+
+
+
+
+
+.post {
+  border: 1px solid #ccc;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+}
+
+.post img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.date-time {
+  font-size: 0.8em;
+  text-align: right;
+  color: #666;
+}
+}

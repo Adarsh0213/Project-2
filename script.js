@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
   loginForm.addEventListener('submit', function(event) {
     event.preventDefault(); // Prevent form submission
 
-    const userID = document.getElementById('userID').value;
+    const userID = document.getElementById('UserID').value; // Corrected to match input id
     const password = document.getElementById('password').value;
 
     // Retrieve stored user data from localStorage
@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (storedUserData && userID === storedUserData.userID && password === storedUserData.password) {
       alert('Login successful!');
-      window.location.href = './Dashboard page/Dashboard.html';
+      window.location.href = './Dashboard page/Dashboard.html'; // Redirect to dashboard on success
     } else {
       alert('Invalid user ID or password. Please try again.');
     }

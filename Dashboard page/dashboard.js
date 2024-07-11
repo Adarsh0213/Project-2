@@ -50,38 +50,39 @@ function logout() {
 
 
 
+// Get references to DOM elements
+const chatWindow = document.getElementById('chatWindow');
+const chatInput = document.getElementById('chatInput');
 
-function openChat(friendName) {
-  const chatWindow = document.getElementById('chatWindow');
-  chatWindow.innerHTML = `<h3>Chat with ${friendName}</h3>`;
-  loadMessages(friendName);
-}
-
-
+// Function to send a message
 function sendMessage() {
-  const chatInput = document.getElementById('chatInput');
-  const message = chatInput.value;
-  const chatWindow = document.getElementById('chatWindow');
+  const message = chatInput.value.trim(); // Trim removes leading/trailing whitespace
 
-  if (message) {
-    const messageElement = document.createElement('div');
-    messageElement.className = 'message sent';
-    messageElement.textContent = message;
-    chatWindow.appendChild(messageElement);
-    chatInput.value = '';
-    
-    // Simulate receiving a reply after 1 second
+  if (message !== '') {
+    displayMessage('You', message); // Display your message
+    chatInput.value = ''; // Clear the input field
+
+    // Simulate reply (for demonstration purposes)
     setTimeout(() => {
-      const replyElement = document.createElement('div');
-      replyElement.className = 'message received';
-      replyElement.textContent = 'This is a reply message.';
-      chatWindow.appendChild(replyElement);
-    }, 1000);
+      displayMessage('Friend', 'Hello!'); // Simulated reply from friend
+    }, 1000); // Delay for demonstration (1 second)
   }
 }
 
-function loadMessages(friendName) {
-  // This function can be used to load previous chat messages with the friend from a database
-  // For now, it's a placeholder function
-  console.log(`Loading messages with ${friendName}`);
+// Function to display a message in the chat window
+function displayMessage(sender, message) {
+  const messageElement = document.createElement('div');
+  messageElement.classList.add('message');
+  messageElement.innerHTML = `<strong>${sender}:</strong> ${message}`;
+  chatWindow.appendChild(messageElement);
+
+  // Scroll to the bottom of the chat window
+  chatWindow.scrollTop = chatWindow.scrollHeight;
 }
+
+
+
+
+
+
+

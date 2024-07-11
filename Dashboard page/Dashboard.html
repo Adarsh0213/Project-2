@@ -1,9 +1,11 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Instagram Clone - Home</title>
+  <title>Social App - Home</title>
   <link rel="stylesheet" href="dashboard.css">
 </head>
 <body>
@@ -14,7 +16,7 @@
         <span class="bar"></span>
         <span class="bar"></span>
       </button>
-      <h1>Instagram Clone</h1>
+      <h1>Social</h1>
     </div>
     <div class="header-right">
       <div id="usernameDisplay"></div>
@@ -26,7 +28,8 @@
     <aside class="sidebar" id="sidebar">
       <!-- Sidebar content -->
       <ul>
-        <li><a href="#">Profile</a></li>
+        <li><a href="../Profile page/profile.html" class="button-link">Profile</a></li>
+
         <li><a href="#">Explore</a></li>
         <li><a href="#">Notifications</a></li>
         <li><a href="#">Settings</a></li>
@@ -46,6 +49,9 @@
       </section>
     </section>
     
+
+
+
     <aside class="chat">
       <!-- Chatting options content -->
       <h2>Chatting Options</h2>
@@ -62,7 +68,9 @@
       <button onclick="sendMessage()">Send</button>
     </aside>
   </main>
-  
+
+
+  <script src="/socket.io/socket.io.js"></script>
   <script src="dashboard.js"></script>
 </body>
 </html>

@@ -24,6 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
             alert('Please enter a caption or text for your post');
             return;
         }
+        
 
         // Get the current date and time
         const currentDate = new Date();

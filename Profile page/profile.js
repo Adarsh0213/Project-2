@@ -1,14 +1,18 @@
+
+function logout () {
+    localStorage.removeItem('username');
+    alert('Logged out successfully.');
+    window.location.href = '../index.html';
+}
+
+
 document.addEventListener('DOMContentLoaded', function() {
     const addPostForm = document.getElementById('addPostForm');
     const postList = document.getElementById('postList');
     const imageUpload = document.getElementById('imageUpload');
     const profileImage = document.getElementById('profileImage');
 
-    function logout() {
-        localStorage.removeItem('username');
-        alert('Logged out successfully.');
-        window.location.href = '../index.html';
-    }
+
 
     // Load posts and profile picture from local storage on page load
     loadPosts();
@@ -24,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
             alert('Please enter a caption or text for your post');
             return;
         }
-        
+
 
         // Get the current date and time
         const currentDate = new Date();
@@ -125,3 +129,5 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('userID').textContent = userID;
     document.getElementById('email').textContent = email;
 });
+
+
